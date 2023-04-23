@@ -17,7 +17,7 @@ tokenizer.decoder = decoders.ByteLevel()
 trainer = trainers.BpeTrainer(
     vocab_size=60000,
     min_frequency=2,
-    special_tokens=["<PAD>", "<BOS>", "<EOS>", "<EOD>"],
+    special_tokens=["<PAD>", "<BOS>", "<EOS>", "<|endoftext|>"],
 )
 
 # Train the tokenizer on your dataset

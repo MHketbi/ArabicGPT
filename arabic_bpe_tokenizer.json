@@ -32,7 +32,7 @@
     },
     {
       "id": 3,
-      "content": "<EOD>",
+      "content": "<|endoftext|>",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -68,7 +68,7 @@
       "<PAD>": 0,
       "<BOS>": 1,
       "<EOS>": 2,
-      "<EOD>": 3,
+      "<|endoftext|>": 3,
       "¡": 4,
       "¢": 5,
       "£": 6,
