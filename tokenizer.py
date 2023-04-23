@@ -30,11 +30,10 @@ tokenizer.save("arabic_bpe_tokenizer.json")
 # Load the trained tokenizer from the saved file
 tokenizer = Tokenizer.from_file("arabic_bpe_tokenizer.json")
 
-# Save the vocab.json and merges.txt files
-with open("vocab.json", "w", encoding="utf-8") as vocab_file, open("merges.txt", "w", encoding="utf-8") as merges_file:
+# Save the vocab.json file
+with open("vocab.json", "w", encoding="utf-8") as vocab_file:
     vocab = tokenizer.get_vocab()
-    for token, token_id in vocab.items():
-        vocab_file.write(f"{token}\t{token_id}\n")
+    json.dump(vocab, vocab_file, ensure_ascii=False)
 
 # Load the tokenizer configuration from the arabic_bpe_tokenizer.json file
 with open("arabic_bpe_tokenizer.json", "r", encoding="utf-8") as config_file:
